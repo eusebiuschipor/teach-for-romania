@@ -151,6 +151,27 @@ header .dropdown-content a {
     position: relative;
 }
 
+.social-links .icon:before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    -webkit-transition: width 0.3s;
+            transition: width 0.3s;
+}
+
+.social-links .icon:hover:before {
+    width: 100%;
+}
+
+.social-links .icon:hover {
+    color: white;
+    cursor: pointer;
+}
+
 .social-links .icon > i {
     z-index: 1;
 }
@@ -159,7 +180,7 @@ footer .social-links {
     justify-content: flex-start;
 }
 
-.icon-facebook:before {
+.icon:before {
     background-color: #4267B2;
 }
 
@@ -808,6 +829,27 @@ footer .content .social-links .icon i {
     footer .content .column-1,
     footer .content .column-2 {
         padding-right: 0;
+    }
+
+    .top-bar .content .logo .hamburger-menu {
+        display: block;
+        margin-left: 50px;
+        /* margin-top: 50px; */
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .top-buttons {
+        display: none !important;
+    }
+
+    .buttons {
+        display: none !important;
+    }
+
+    header,
+    .top-bar {
+        display: flex;
     }
 }
 
